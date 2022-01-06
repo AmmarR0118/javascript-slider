@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+h1 {
+    font-weight: 500;
+}
+.wrapper {
+    width: 90vw;
+    height: 540px;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.slider-container {
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+    cursor: grab;
+}
+.slide {
+    width: 70vw;
+    height: 500px;
+    transition: 500ms;
+    margin: 0 0 0 6px;
+}
+.slide img {
+    width: 70vw;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.active {
+    height: 530px;
+}
+.prev {
+    position: fixed;
+    top: 50%;
+    left: 3%;
+}
+.next {
+    position: fixed;
+    top: 50%;
+    right: 3%;
+}
+.prev, .next {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transform: scale(1);
+    transition: 500ms;
+    cursor: pointer;
+    z-index: 100;
+}
+.prev:hover, .next:hover {
+    transform: scale(1.2);
+}
+.navigation-Dots {
+    display: grid;
+    place-content: center;
+    grid-auto-flow: column;
+    position: fixed;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.single-dot {
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-right: 6px;
+    cursor: pointer;
+}
+.single-dot.active {
+    background-color: #444;
+}
